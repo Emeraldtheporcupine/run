@@ -1,0 +1,48 @@
+{
+    "name": "RUN",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "images.g.jres",
+        "images.g.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "2.0.61",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#FFFFFF",
+        "#FF2121",
+        "#FF7070",
+        "#FB4B4B",
+        "#C30909",
+        "#A32424",
+        "#DB5151",
+        "#AD0000",
+        "#FF8585",
+        "#C22E2E",
+        "#A48484",
+        "#6D4040",
+        "#E5C3C3",
+        "#903C3C",
+        "#000000"
+    ]
+}

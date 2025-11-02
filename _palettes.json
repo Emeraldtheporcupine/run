@@ -1,0 +1,28 @@
+{
+    "nextPaletteID": 1,
+    "palettes": {
+        "custom0": {
+            "id": "custom0",
+            "name": "Custom",
+            "colors": [
+                "#000000",
+                "#FFFFFF",
+                "#FF2121",
+                "#FF7070",
+                "#FB4B4B",
+                "#C30909",
+                "#A32424",
+                "#DB5151",
+                "#AD0000",
+                "#FF8585",
+                "#C22E2E",
+                "#A48484",
+                "#6D4040",
+                "#E5C3C3",
+                "#903C3C",
+                "#000000"
+            ],
+            "custom": true
+        }
+    }
+}
