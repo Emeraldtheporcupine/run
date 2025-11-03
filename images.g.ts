@@ -208,13 +208,23 @@ f f f . f f f .
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `;
+            case "image7":
+            case "CoinParticle":return img`
+9 9 
+9 9 
+`;
+            case "image8":
+            case "CoinParticleDarker":return img`
+a a 
+a a 
+`;
             case "image6":
-            case "myImage":return img`
-. c b b . 
-5 c c c b 
-5 c c c c 
-5 5 c c 5 
-. 5 5 . . 
+            case "Rock":return img`
+. b d d . 
+4 b b b d 
+4 b b b b 
+8 4 b b 8 
+. 8 8 . . 
 `;
         }
         return null;
@@ -518,32 +528,6 @@ b b d d d d 3 b
 . f f f . f f . 
 . . . . . f f f 
 `];
-            case "Rock Fling":
-            case "anim9":return [img`
-. c b b . 
-5 c c c b 
-5 c c c c 
-5 5 c c 5 
-. 5 5 . . 
-`, img`
-. c b b . 
-c c c c c 
-5 c c c b 
-. 5 c c b 
-. 5 5 5 . 
-`, img`
-. b b . . 
-c c b b b 
-5 c c c c 
-5 5 c c b 
-. 5 5 5 . 
-`, img`
-. b b c . 
-. c c c b 
-5 c c c c 
-5 5 c c 5 
-. 5 5 5 . 
-`];
             case "Saw":
             case "anim3":return [img`
 . . . . . . . d d d . . . . . . 
@@ -785,6 +769,32 @@ b 7 b b b b b b b b 1 1 1 b . 7
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
+`];
+            case "Rock Fling":
+            case "anim9":return [img`
+. b d d . 
+4 b b b d 
+4 b b b b 
+8 4 b b 8 
+. 8 8 . . 
+`, img`
+. b d d . 
+b b b b b 
+4 b b b d 
+. 4 b b d 
+. 8 8 4 . 
+`, img`
+. d d . . 
+b b d d d 
+4 b b b b 
+8 4 b b d 
+. 8 8 4 . 
+`, img`
+. d d b . 
+. b b b d 
+4 b b b b 
+8 4 b b 8 
+. 8 8 4 . 
 `];
         }
         return null;

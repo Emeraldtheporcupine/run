@@ -26,9 +26,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Collectable, function (sprite, o
 scene.onHitWall(SpriteKind.Enemy, function (sprite, location) {
     tiles.setTileAt(location, assets.tile`transparency8`)
     tiles.setWallAt(location, false)
-    Particles = [sprites.create(assets.image`myImage`, SpriteKind.Rock)]
+    scene.cameraShake(2, 500)
+    Particles = [sprites.create(assets.image`Rock`, SpriteKind.Rock)]
     for (let index = 0; index < 3; index++) {
-        Particles.unshift(sprites.create(assets.image`myImage`, SpriteKind.Rock))
+        Particles.unshift(sprites.create(assets.image`Rock`, SpriteKind.Rock))
     }
     for (let ParticleSprite of Particles) {
         ParticleSprite.ay = 400
@@ -64,6 +65,22 @@ info.onLifeZero(function () {
     })
 })
 sprites.onOverlap(SpriteKind.Collectable, SpriteKind.Enemy, function (sprite, otherSprite) {
+    CoinParticles = [sprites.create(assets.image`CoinParticle`, SpriteKind.Rock)]
+    for (let index = 0; index < 3; index++) {
+        CoinParticles.unshift(sprites.create(assets.image`CoinParticle`, SpriteKind.Rock))
+    }
+    for (let index = 0; index < 4; index++) {
+        CoinParticles.unshift(sprites.create(assets.image`CoinParticleDarker`, SpriteKind.Rock))
+    }
+    for (let CoinParticleSprite of CoinParticles) {
+        CoinParticleSprite.ay = 400
+        CoinParticleSprite.vx = randint(-25, 25)
+        CoinParticleSprite.vy = randint(-100, -50)
+        tiles.placeOnTile(CoinParticleSprite, sprite.tilemapLocation())
+        timer.after(2000, function () {
+            sprites.destroy(CoinParticleSprite)
+        })
+    }
     sprites.destroy(sprite)
     music.play(music.createSoundEffect(WaveShape.Noise, 5000, 5000, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
 })
@@ -75,6 +92,7 @@ sprites.onOverlap(SpriteKind.Collectable, SpriteKind.Collectable, function (spri
     sprite.vy = -50
 })
 let direction = 0
+let CoinParticles: Sprite[] = []
 let Particles: Sprite[] = []
 let groundFire: Sprite = null
 let coin: Sprite = null
